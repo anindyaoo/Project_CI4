@@ -1,0 +1,324 @@
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #2E3A59;
+}
+
+.profil-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profil-container p {
+    font-size: 1.7rem;
+    color: #444;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.7;
+    background-color: #d0dfe9;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+
+.profil-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2980b9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+
+.h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #2E3A59;
+    font-size: 2.5rem;
+}
+
+.p {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.section.matkul {
+    background-color: #f6f9fc;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section.matkul h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.matkulkontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.matkulcard {
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.matkulcard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.matkulcard img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.matkulcard h3 {
+    margin: 0;
+    color: #2E3A59;
+}
+
+.h2 {
+    text-align: center;
+    margin-top: 40px;
+    color: #4a90e2;
+}
+
+
+/* === Tentang Saya Section === */
+.tentangSy {
+    background-color: #f4f8fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.judul-section {
+    font-size: 2.2rem;
+    color: #2E3A59;
+    margin-bottom: 40px;
+}
+
+/* Deskripsi atas */
+.tentang-deskripsi {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Flex container untuk motivasi + skill */
+.tentang-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.motivasi {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+    border-left: 6px solid #F6BDC0;
+}
+
+.motivasi h2 {
+    font-size: 1.8rem;
+    color: #E25D6B;
+    margin-bottom: 15px;
+}
+
+.motivasi p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    width: 100%;
+    border-left: 6px solid #A7C7E7;
+}
+
+.skill h2 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 25px;
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+
+.skill-item {
+    background-color: #C6F1E7;
+    color: #1B7F6B;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    min-width: 120px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skill-item:hover {
+    background-color: #a8e7d6;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .tentang-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .motivasi,
+    .skill {
+        max-width: 600px;
+    }
+}
+
+/* Tombol Hubungi Saya */
+.a button {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.a button:hover {
+    background-color: #023e8a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* hubungi saya */
+/* === Hubungi Saya Section === */
+.contact {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+form#wa-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#wa-form input,
+form#wa-form select,
+form#wa-form textarea {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#wa-form input:focus,
+form#wa-form select:focus,
+form#wa-form textarea:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 6px rgba(0, 119, 182, 0.2);
+}
+
+/* Submit Button */
+form#wa-form button {
+    padding: 14px;
+    background-color: #0077b6;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+form#wa-form button:hover {
+    background-color: #023e8a;
+    transform: scale(1.03);
+}
+
+
+.footer {
+    background-color: #3167ef;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
