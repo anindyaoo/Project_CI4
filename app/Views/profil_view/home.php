@@ -50,26 +50,12 @@
         <section class="matkul">
             <h2>Mata Kuliah</h2>
             <div class="matkulkontainer">
-                <div class="matkulcard" onclick="location.href='/pemweb'">
-                    <img src="gambar/logo.jpg" alt="">
-                    <h3>Pemrograman Web</h3>
-                </div>
-                <div class="matkulcard" onclick="location.href='/rpl'">
-                    <img src="gambar/logo.jpg" alt="">
-                    <h3>Rekayasa Perangkat Lunak</h3>
-                </div>
-                <div class="matkulcard" onclick="location.href='/mbd'">
-                    <img src="gambar/logo.jpg" alt="">
-                    <h3>Manajemen Basis Data</h3>
-                </div>
-                <div class="matkulcard" onclick="location.href='/mpsi'">
-                    <img src="gambar/logo.jpg" alt="">
-                    <h3>Metodologi Penelitian Sistem Informasi</h3>
-                </div>
-                <div class="matkulcard" onclick="location.href='/mjk'">
-                    <img src="gambar/logo.jpg" alt="">
-                    <h3>Manajemen Jaringan Komputer</h3>
-                </div>
+                <?php foreach ($courses as $course): ?>
+                    <div class="matkulcard" onclick="location.href='<?= site_url('matkul/' . $course['id']) ?>'">
+                        <img src="<?= base_url('gambar/' . $course['gambar']) ?>" alt="">
+                        <h3><?= esc($course['nama_mk']) ?></h3>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
 
