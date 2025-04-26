@@ -2,35 +2,29 @@
 
 namespace App\Controllers;
 
+use App\Models\mk_db;
+
 class Profil extends BaseController
 {
+    public function __construct()
+    {
+        helper('url'); // Sekali load untuk seluruh method
+    }
     public function home(): string
     {
-        return view('profil_view/home');
+        $courseModel = new mk_db();
+        $data['courses'] = $courseModel->findAll(); //buat nampilin model
+        return view('profil_view/home', $data);
     }
-
-    public function pemweb(): string
+    public function matkul($id): string
     {
-        return view('profil_view/pemweb');
-    }
+        $courseModel = new mk_db();
+        $data['courses'] = $courseModel->findAll();
+        $data['matkul'] = $courseModel->find($id); // <- ini penting
 
-    public function mbd(): string
-    {
-        return view('profil_view/mbd');
-    }
-
-    public function mjk(): string
-    {
-        return view('profil_view/mjk');
-    }
-
-    public function mpsi(): string
-    {
-        return view('profil_view/mpsi');
-    }
-
-    public function rpl(): string
-    {
-        return view('profil_view/rpl');
+        if (!is_numeric($id)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("ID matkul tidak valid.");
+        }
+        return view('profil_view/matkul', $data); // <- ini juga
     }
 }
